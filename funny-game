@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Last Digit Gift</title>
+</head>
+<body>
+  <h2>Nhập vào con số của bạn:</h2>
+  <input type="number" id="numberInput">
+  <button onclick="checkGift()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function checkGift() {
+      const a = parseInt(document.getElementById("numberInput").value);
+      let message = "";
+
+      if (a === 154) {
+        message = "🎁 Tặng cậu free món quà này nhé";
+      } else {
+        switch (a % 10) {
+          case 0: message = "Bạn nhận được một món quà trong box 2"; break;
+          case 1: message = "Bạn nhận được một món quà trong box 1"; break;
+          case 2: message = "Bạn nhận được một món quà trong box 2"; break;
+          case 3: message = "Bạn nhận được một món quà trong box 1"; break;
+          case 4: message = "Bạn nhận được một món quà trong box 2"; break;
+          case 5: message = "Bạn nhận được một món quà trong box 1"; break;
+          case 6: message = "Bạn nhận được một món quà trong box 2"; break;
+          case 7: message = "Bạn nhận được một món quà trong box 1"; break;
+          case 8: message = "Bạn nhận được một món quà trong box 2"; break;
+          case 9: message = "Bạn nhận được một món quà trong box 1"; break;
+        }
+      }
+
+      document.getElementById("result").innerText = message;
+    }
+  </script>
+</body>
+</html>
